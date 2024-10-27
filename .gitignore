@@ -1,0 +1,113 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Config and IDE specific files
+*.vscode/
+*.idea/
+*.sublime-workspace
+*.sublime-project
+
+# MacOS and Linux specific files
+.DS_Store
+*.swp
+*.swo
+
+# Test coverage and pytest cache
+coverage/
+htmlcov/
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+
+# MyPy type checker cache
+.mypy_cache/
+
+# Pyre type checker cache
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Logs and debug files
+*.log
+*.log.*
+
+# Unit test / test output
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+*.mocha-output
+
+# PyInstaller
+# Usually these files are written by a Python script from pyinstaller to bundle applications.
+*.manifest
+*.spec
+
+# Sphinx documentation
+docs/_build/
+
+# Jupyter Notebook metadata
+*.ipynb_checkpoints
+
+# Local configurations
+*.env
+.env
+.env.*
+*.secrets
+secrets.json
+
+# Pyre type checker
+.pyre/
+
+# Thumbnails, caches, and other temp files
+Thumbs.db
+
+# Pipfile and poetry
+Pipfile.lock
+poetry.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# pytest
+.cache/
