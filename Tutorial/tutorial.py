@@ -491,3 +491,67 @@ for i in random_value_multi_dimensional_list:
     print()
 
 print()
+
+dictionary = {"a": 1, "b": 2, "c": 3}
+print(f"dictionary: {dictionary}")
+print(f"dictionary['a']: {dictionary['a']}")
+print(f"dictionary.get('a'): {dictionary.get('a')}")
+print(f"dictionary.get('d'): {dictionary.get('d')}")
+print(f"Is the 'a' key in the dictionary? {'a' in dictionary}")
+print(f"Is the 'd' key in the dictionary? {'d' in dictionary}")
+
+dictionary["d"] = 4
+print(f"dictionary: {dictionary}")
+print(f"dictionary.values(): {dictionary.values()}")
+print(f"dictionary.keys(): {dictionary.keys()}")
+
+for i, j in dictionary.items():
+    print(i, j)
+
+del dictionary["d"]
+print(f"dictionary: {dictionary}")
+
+dictionary_list = [
+    {"a": 1, "b": 2, "c": 3},
+    {"d": 4, "e": 5, "f": 6},
+    {"g": 7, "h": 8, "i": 9},
+]
+dictionary_list.append({"j": 10, "k": 11, "l": 12})
+print(f"dictionary_list: {dictionary_list}")
+print(f"dictionary_list[0]: {dictionary_list[0]}")
+
+customers = []
+
+while True:
+    create_entry = "default"
+    create_entry = create_entry.lower()
+
+    if create_entry == "default":
+        break
+    else:
+        customers.append(create_entry)
+
+for customer in customers:
+    print(customer)
+
+print()
+
+
+def factorial(number):
+    if number == 1:
+        return 1
+    else:
+        return number * factorial(number - 1)
+
+
+print(f"factorial(5): {factorial(5)}")
+
+
+def fibonacci(number):
+    if number == 0 or number == 1:
+        return 1
+    else:
+        return fibonacci(number - 1) + fibonacci(number - 2)
+
+
+print(f"fibonacci(5): {fibonacci(5)}")
