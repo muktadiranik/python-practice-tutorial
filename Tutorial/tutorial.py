@@ -226,3 +226,268 @@ for char in secret_message:
         original_message += char
 
 print(f"original_message: {original_message}")
+
+
+def add_numbers(a, b):
+    return a + b
+
+
+print(f"add_numbers(10, 20): {add_numbers(10, 20)}")
+
+
+def assign_name(name):
+    name = "John"
+
+
+name = "Alice"
+assign_name(name)
+print(f"name: {name}")
+
+
+def change_name(old_name, new_name):
+    old_name = new_name
+    return old_name
+
+
+print(f"change_name(name, 'Bob'): {change_name(name, 'Bob')}")
+
+# Define globally accessible variables
+global_variable = 10
+
+
+def modify_global_variable():
+    global global_variable
+    global_variable += 1
+    return global_variable
+
+
+print(f"modify_global_variable(): {modify_global_variable()}")
+print(f"global_variable: {global_variable}")
+
+
+def solve_equation(equation):
+    num_1, operation, num_2 = equation.split()
+    num_1, num_2 = int(num_1), int(num_2)
+    return (
+        f"{num_1} {operation} {num_2} = {num_1 + num_2}",
+        f"{num_1} {operation} {num_2} = {num_1 - num_2}",
+    )
+
+
+print(solve_equation("5 + 5"))
+
+
+# Create a function that returns more than one result
+def add_numbers(a, b):
+    return a + b, a - b
+
+
+print(f"add_numbers(10, 20): {add_numbers(10, 20)}")
+
+
+def multiply_divide(a, b):
+    return a * b, a / b
+
+
+print(f"multiply_divide(10, 20): {multiply_divide(10, 20)}")
+
+
+def is_prime(number):
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+    return True
+
+
+print(f"is_prime(10): {is_prime(10)}")
+print(f"is_prime(11): {is_prime(11)}")
+
+
+def get_prime_numbers(n):
+    prime_numbers = []
+    for i in range(2, n):
+        if is_prime(i):
+            prime_numbers.append(i)
+    return prime_numbers
+
+
+print(f"get_prime_numbers(10): {get_prime_numbers(10)}")
+prime_numbers = get_prime_numbers(100)
+
+
+def sum_all(*args):
+    total = 0
+    for arg in args:
+        total += arg
+    return total
+
+
+print(f"sum_all(1, 2, 3, 4, 5): {sum_all(1, 2, 3, 4, 5)}")
+
+
+def get_sum_of_all_prime_numbers(n):
+    prime_numbers = get_prime_numbers(n)
+    return sum_all(*prime_numbers)
+
+
+print(f"get_sum_of_all_prime_numbers(10): {get_sum_of_all_prime_numbers(100)}")
+
+import math
+
+
+def rectangle_area(width, height):
+    return width * height
+
+
+def circle_area(radius):
+    return math.pi * radius * radius
+
+
+def get_area(shape):
+    shape = shape.lower()
+    if shape == "circle":
+        return circle_area(10)
+    elif shape == "rectangle":
+        return rectangle_area(10, 20)
+    else:
+        return 0
+
+
+print(f"get_area('circle'): {get_area('circle')}")
+print(f"get_area('rectangle'): {get_area('rectangle')}")
+
+import random
+
+random_list = ["string", 1, 2.2, True, None]
+for i in random_list:
+    print(i)
+
+one_to_ten = list(range(11))
+for i in one_to_ten:
+    print(i)
+
+random_list = random_list + one_to_ten
+for i in random_list:
+    print(i)
+
+first_3 = random_list[:3]
+last_3 = random_list[-3:]
+
+print(f"len(random_list): {len(random_list)}")
+print(f"first_3(random_list): {random_list[:3]}")
+print(f"last_3(random_list): {random_list[-3:]}")
+print(f"'string' in random_list: {'string' in random_list}")
+print(f"first_3 * 3: {first_3 * 3}")
+print(f"last_3 * 3: {last_3 * 3}")
+print(f"index of 'string' in random_list: {random_list.index('string')}")
+print(f"How many 'string' are in the list? {random_list.count('string')}")
+
+random_list[0] = "new string"
+print(f"random_list: {random_list}")
+
+random_list.append("new string")
+print(f"random_list: {random_list}")
+
+number_list = []
+for i in range(10):
+    number_list.append(random.randrange(0, 100))
+print(f"number_list: {number_list}")
+
+i = len(number_list) - 1
+
+while i > 1:
+    j = 0
+    while j < i:
+        print(f"i: {i}, j: {j}")
+        print()
+
+        if number_list[j] > number_list[j + 1]:
+            temp = number_list[j]
+            number_list[j] = number_list[j + 1]
+            number_list[j + 1] = temp
+        else:
+            j += 1
+
+        for k in number_list:
+            print(k)
+        print()
+    i -= 1
+
+for k in number_list:
+    print(k, end=" ")
+
+print()
+
+number_list = [random.randrange(1, 100) for i in range(10)]
+number_list.sort()
+for i in number_list:
+    print(i, end=" ")
+
+print()
+
+number_list.insert(2, 50)
+for i in number_list:
+    print(i, end=" ")
+
+print()
+
+number_list.remove(50)
+for i in number_list:
+    print(i, end=" ")
+
+print()
+
+print(f"number_list.pop(0): {number_list.pop(0)}")
+
+even_numbers = [i * 2 for i in range(10)]
+for i in even_numbers:
+    print(i, end=" ")
+
+print()
+
+values = [[math.pow(i, 2), math.pow(i, 3), math.pow(i, 4)] for i in range(5)]
+print(f"values: {values}")
+
+multi_dimensional_list = [[0] * 10 for i in range(5)]
+print(f"multi_dimensional_list: {multi_dimensional_list}")
+
+multi_dimensional_list[0][0] = 1
+print(f"multi_dimensional_list: {multi_dimensional_list}")
+
+list_table = [[0] * 10 for i in range(5)]
+for i in list_table:
+    for j in i:
+        print(j, end=" ")
+    print()
+
+for i in range(list_table.__len__()):
+    for j in range(list_table[i].__len__()):
+        list_table[i][j] = random.randint(0, 100)
+
+for i in list_table:
+    for j in i:
+        print(j, end=" ")
+    print()
+
+print()
+
+for i in range(len(list_table)):
+    for j in range(len(list_table[i])):
+        list_table[i][j] = i * j
+
+print()
+
+for i in list_table:
+    for j in i:
+        print(j, end=" ")
+    print()
+
+print()
+
+random_value_multi_dimensional_list = [[random.randint(0, 100)] * 10 for i in range(5)]
+for i in random_value_multi_dimensional_list:
+    for j in i:
+        print(j, end=" ")
+    print()
+
+print()
