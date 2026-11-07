@@ -555,3 +555,19 @@ def fibonacci(number):
 
 
 print(f"fibonacci(5): {fibonacci(5)}")
+
+
+# Testing Local Autocomplete extension
+# Write a program that print a tree image using both forloop and while loop
+print()
+print("Tree using for loop:")
+for i in range(1, 11):
+    print(" " * (10 - i) + "*" * (2 * i - 1))
+
+print()
+print("Tree using while loop:")
+i = 1
+while i <= 10:
+    print(" " * (10 - i) + "*" * (2 * i - 1))
+    i += 1
+
